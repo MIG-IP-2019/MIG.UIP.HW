@@ -51,24 +51,28 @@ namespace MIG.UIP.HW2.ConditionsArrays
             Console.WriteLine("are there positive numbers  " + a + ",  " + b + ",  " + c + ",  " + isOnesOfNumbersPositive);
 
 
-            // task #5 (check  only one of numbers is bigger 0)  Variant 1                        
-            int ax = (a > 0 && a != 0) ? 1 : 0;
-            int bx = (b > 0 && b != 0) ? 1 : 0;
-            int cx = (c > 0 && c != 0) ? 1 : 0;
-            bool isOnlyOneOfNumbersPositive = ((ax + bx + cx) == 1);
-            int howManyPossitiveNumbers = ax + bx + cx;
+                    // task #5 (check  only one of numbers is bigger 0)  Variant 1                        
+                    int ax = (a > 0 && a != 0) ? 1 : 0;
+                    int bx = (b > 0 && b != 0) ? 1 : 0;
+                    int cx = (c > 0 && c != 0) ? 1 : 0;
+                    bool isOnlyOneOfNumbersPositive = ((ax + bx + cx) == 1);
+                    int howManyPossitiveNumbers = ax + bx + cx;
 
-            // task #5 (check  only one of numbers is bigger 0)  Variant 2
-            bool isOnePositiveNumber = ((a > 0 ^ b > 0) ^ (c > 0 && (a < 0 || b < 0)));  // this method do not working , if ons of the random numbers is "0".
+                    // task #5 (check  only one of numbers is bigger 0)  Variant 2
+                    bool isOnePositiveNumber = ((a > 0 ^ b > 0) ^ (c > 0 && (a < 0 || b < 0)));  // this method do not working , if ons of the random numbers is "0".
 
-            Console.WriteLine("TEST method  is there only one positive numbers    " + a + "  ," + b + "  ," + c + "  ," + isOnePositiveNumber);
-            Console.WriteLine("is there only one positive numbers                 " + a + ",  " + b + ",  " + c + ",  " + isOnlyOneOfNumbersPositive);
-            Console.WriteLine("How many possitive Numbers  in array               " + a + ",  " + b + ",  " + c + ",  " + howManyPossitiveNumbers);
+                    Console.WriteLine("TEST method  is there only one positive numbers    " + a + "  ," + b + "  ," + c + "  ," + isOnePositiveNumber);
+                    Console.WriteLine("is there only one positive numbers                 " + a + ",  " + b + ",  " + c + ",  " + isOnlyOneOfNumbersPositive);
+                    Console.WriteLine("How many possitive Numbers  in array               " + a + ",  " + b + ",  " + c + ",  " + howManyPossitiveNumbers);
+                    
+
+
+            // task #6 (check.  is number  odd three digits?)
+            int d = randomizer.Next(1, 2000);
+            bool isNumberOdd = (((d % 2) == 0) && ((d >= 100) && (d <= 999)));
+            Console.WriteLine("Is number    " + d + "     odd & three digits   " + isNumberOdd);
+
             Console.ReadLine();
-
-
-
-
         }
     }
 }
