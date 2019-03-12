@@ -43,12 +43,12 @@ namespace MIG.UIP.HW2.ConditionsArrays
 
             // task #3 (check which of the numbers is greater)            
             bool isBiggerABC = (a < b && b < c);
-            Console.WriteLine(a + "<" + b + "<" + c + "   =   " + isBiggerABC);
+                Console.WriteLine(a + "<" + b + "<" + c + "   =   " + isBiggerABC);
 
 
             // task #4 (check  ones of numbers is bigger 0)
             bool isOnesOfNumbersPositive = (a > 0 || b > 0 || c > 0);
-            Console.WriteLine("are there positive numbers  " + a + ",  " + b + ",  " + c + ",  " + isOnesOfNumbersPositive);
+                Console.WriteLine("are there positive numbers  " + a + ",  " + b + ",  " + c + ",  " + isOnesOfNumbersPositive);
 
 
                     // task #5 (check  only one of numbers is bigger 0)  Variant 1                        
@@ -67,10 +67,30 @@ namespace MIG.UIP.HW2.ConditionsArrays
                     
 
 
-            // task #6 (check.  is number  odd three digits?)
+            // task #6 (check.  is number  odd and  three digits?)
             int d = randomizer.Next(1, 2000);
             bool isNumberOdd = (((d % 2) == 0) && ((d >= 100) && (d <= 999)));
-            Console.WriteLine("Is number    " + d + "     odd & three digits   " + isNumberOdd);
+                Console.WriteLine("Is number    " + d + "     odd & three digits? " + isNumberOdd);
+
+            // task 7 (point in rectangle)
+            int x = randomizer.Next(-300, 300);
+            int y = randomizer.Next(-300, 300);            
+            int x1 = randomizer.Next(-100, -1);
+            int y1 = randomizer.Next(1, 100);
+            int x2 = randomizer.Next(1, 100);
+            int y2 = randomizer.Next(-100, -1);
+
+            x = 2;
+            y = 2;
+            x1 = 1;
+            y1 = 3;
+            x2 = 5;
+            y2 = 1;
+
+
+            bool isPointInRectangle = (((x > x1) && (x < x2))&&((y>y1)&&(y<y2)));
+
+            Console.WriteLine("Is point  " + x + "  ,  " + y+"   in rectangle   " + x1+" , " + y1 + "  x  " + x2 + " , " + y2 + "   " + isPointInRectangle);
 
             Console.ReadLine();
         }
