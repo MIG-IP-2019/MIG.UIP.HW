@@ -139,7 +139,8 @@ namespace MIG.UIP.HW2.ConditionsArrays
 
             else
             {
-                if ((Math.Abs(x1 - x2)) == (Math.Abs(y1 - y2))) {
+                if ((Math.Abs(x1 - x2)) == (Math.Abs(y1 - y2)))
+                {
                     Console.WriteLine("Quin can go");
                 }
                 else
@@ -222,10 +223,10 @@ namespace MIG.UIP.HW2.ConditionsArrays
             }
 
 
-            // task 15 (Measure of length)
-            Console.WriteLine(" \r\n \r\n Response from task #15  ");
-            int measureName = randomizer.Next(1, 6);           
-            double length = randomizer.NextDouble()* (100) ;
+            // task 14 (Measure of length)
+            Console.WriteLine(" \r\n \r\n Response from task #14  ");
+            int measureName = randomizer.Next(1, 6);
+            double length = randomizer.NextDouble() * (100);
 
             length = Math.Round(length, 2);
 
@@ -233,62 +234,143 @@ namespace MIG.UIP.HW2.ConditionsArrays
             switch (measureName)
             {
                 case 1:
-                    Console.WriteLine(length+"Decimeter ="+ length/10+" meter");
+                    Console.WriteLine(length + "Decimeter =" + length / 10 + " meter");
                     break;
                 case 2:
-                    Console.WriteLine(length + "Kilometer =" +length * 1000 + " meter");
+                    Console.WriteLine(length + "Kilometer =" + length * 1000 + " meter");
                     break;
                 case 3:
-                    Console.WriteLine(length + "Meter =" + length +  " meter");
+                    Console.WriteLine(length + "Meter =" + length + " meter");
                     break;
                 case 4:
                     Console.WriteLine(length + "Millimeter =" + length / 1000 + " meter");
                     break;
                 case 5:
-                    Console.WriteLine(length + "Centimeter =" + length/ 100 + " meter");
+                    Console.WriteLine(length + "Centimeter =" + length / 100 + " meter");
                     break;
-               
+
             }
 
 
-            // task 16 (Numbers from 1 to 99)
+            // task 15 (Numbers from 1 to 99)
             Console.WriteLine(" \r\n \r\n Response from task #15  ");
 
 
             int number = randomizer.Next(1, 100);
+           
+
+            string firsNumber = "";
+            string secondNumber = "";
+            int numberValue = number;
+
+
             if (number >= 1 && number <= 19)
             {
                 switch (number)
                 {
-                    case 1:
-                        Console.WriteLine("One");
+                    case 1:                        firsNumber = "One";
                         break;
-                    case 2:
-                        Console.WriteLine("Two");
+                    case 2:                        firsNumber = "Two";
                         break;
-                    case 3:
-                        Console.WriteLine("Three");
+                    case 3:                        firsNumber = "Three";
                         break;
-                    case 4:
-                        Console.WriteLine("Four");
+                    case 4:                        firsNumber = "Four";
                         break;
-                    case 5:
-                        Console.WriteLine("Five");
+                    case 5:                        firsNumber = "Five";
                         break;
-                    case 6:
-                        Console.WriteLine("Six");
+                    case 6:                        firsNumber = "Six";
                         break;
-
-
+                    case 7:                        firsNumber = "Seven";
+                        break;
+                    case 8:                        firsNumber = "Eight";
+                        break;
+                    case 9:                        firsNumber = "Nine";
+                        break;
+                    case 10:                        firsNumber = "Ten";
+                        break;
+                    case 11:                        firsNumber = "Eleven";
+                        break;
+                    case 12:                        firsNumber = "Twelve";
+                        break;
+                    case 13:                        firsNumber = "Thirteen";
+                        break;
+                    case 14:                        firsNumber = "Fourteen";
+                        break;
+                    case 15:                        firsNumber = "Fifteen";
+                        break;
+                    case 16:                        firsNumber = "Sixteen";
+                        break;
+                    case 17:                        firsNumber = "Seventeen";
+                        break;
+                    case 18:                        firsNumber = "Eighteen";
+                        break;
+                    case 19:                        firsNumber = "Nineteen";
+                        break;
                 }
 
             }
+            else
+                if (number >= 20 && number <= 29)
+                firsNumber = "Twenty";
+            else
+                    if (number >= 30 && number <= 39)
+                firsNumber = "Thirty";
+            else
+                    if (number >= 40 && number <= 49)
+                firsNumber = "Forty";
+            else
+                    if (number >= 50 && number <= 59)
+                firsNumber = "Fifty";
+            else
+                    if (number >= 60 && number <= 69)
+                firsNumber = "Sixty";
+            else
+                    if (number >= 70 && number <= 79)
+                firsNumber = "Seventy";
+            else
+                    if (number >= 80 && number <= 89)
+                firsNumber = "Eighty";
+            else
+                    if (number >= 90 && number <= 99)
+                firsNumber = "Ninety";
+
+            if (number >= 20 && number <= 99)
+                number = number % 10;
+            switch (number)
+            {
+                case 1:                   secondNumber = "One";
+                    break;
+                case 2:                   secondNumber = "Two";
+                    break;
+                case 3:                   secondNumber = "Three";
+                    break;
+                case 4:                   secondNumber = "Four";
+                    break;
+                case 5:                   secondNumber = "Five";
+                    break;
+                case 6:                   secondNumber = "Six";
+                    break;
+                case 7:                   secondNumber = "Seven";
+                    break;
+                case 8:                   secondNumber = "Eight";
+                    break;
+                case 9:                   secondNumber = "Nine";
+                    break;
+                   
+
+
+                    
 
 
 
 
+                   
+
+            }
+            Console.WriteLine("  ("+numberValue+" ) "+ firsNumber + " " + secondNumber);            
             Console.ReadLine();
-            
+
         }
+
     }
 }
