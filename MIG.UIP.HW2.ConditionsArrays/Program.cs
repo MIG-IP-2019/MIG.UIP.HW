@@ -31,9 +31,9 @@ namespace MIG.UIP.HW2.ConditionsArrays
             Console.WriteLine(" \r\n \r\n    Response from task #1");
 
             if (a > 0)
-                Console.WriteLine("Number(a) is positive");
+                Console.WriteLine("Number("+a+") is positive");
             else
-                Console.WriteLine("Number(a) is negative");
+                Console.WriteLine("Number("+a+") is negative");
 
 
 
@@ -334,39 +334,43 @@ namespace MIG.UIP.HW2.ConditionsArrays
                     if (number >= 90 && number <= 99)
                 firsNumber = "Ninety";
 
-            if (number >= 20 && number <= 99)
+            if (number >= 20 && number <= 99) { 
                 number = number % 10;
-            switch (number)
-            {
-                case 1:                   secondNumber = "One";
-                    break;
-                case 2:                   secondNumber = "Two";
-                    break;
-                case 3:                   secondNumber = "Three";
-                    break;
-                case 4:                   secondNumber = "Four";
-                    break;
-                case 5:                   secondNumber = "Five";
-                    break;
-                case 6:                   secondNumber = "Six";
-                    break;
-                case 7:                   secondNumber = "Seven";
-                    break;
-                case 8:                   secondNumber = "Eight";
-                    break;
-                case 9:                   secondNumber = "Nine";
-                    break;
-                   
-
-
-                    
-
-
-
-
-                   
-
+                switch (number)
+                {
+                    case 1:
+                        secondNumber = "One";
+                        break;
+                    case 2:
+                        secondNumber = "Two";
+                        break;
+                    case 3:
+                        secondNumber = "Three";
+                        break;
+                    case 4:
+                        secondNumber = "Four";
+                        break;
+                    case 5:
+                        secondNumber = "Five";
+                        break;
+                    case 6:
+                        secondNumber = "Six";
+                        break;
+                    case 7:
+                        secondNumber = "Seven";
+                        break;
+                    case 8:
+                        secondNumber = "Eight";
+                        break;
+                    case 9:
+                        secondNumber = "Nine";
+                        break;
+                }
+               
             }
+                else
+                secondNumber = "";
+
             Console.WriteLine("  ("+numberValue+" ) "+ firsNumber + " " + secondNumber);            
             Console.ReadLine();
 
