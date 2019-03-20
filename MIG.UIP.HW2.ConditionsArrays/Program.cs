@@ -59,8 +59,8 @@ namespace MIG.UIP.HW2.ConditionsArrays
 
             bool isOnesOfNumbersPositive = (a > 0 || b > 0 || c > 0);
             Console.WriteLine("are there positive numbers  " + a + ",  " + b + ",  " + c + ",  " + isOnesOfNumbersPositive);
-
-
+            
+            
             // task #5 (check  only one of numbers is bigger 0)  Variant 1   
             int ax = (a > 0 && a != 0) ? 1 : 0;
             int bx = (b > 0 && b != 0) ? 1 : 0;
@@ -68,7 +68,9 @@ namespace MIG.UIP.HW2.ConditionsArrays
             bool isOnlyOneOfNumbersPositive = ((ax + bx + cx) == 1);
             int howManyPossitiveNumbers = ax + bx + cx;
 
-            // task #5 (check  only one of numbers is bigger 0)  Variant 2      
+            // task #5 (check  only one of numbers is bigger 0)  Variant 2   
+                      
+                  
             bool isOnePositiveNumber = ((a > 0 ^ b > 0) ^ (c > 0 && (a < 0 || b < 0)));  // this method do not working , if ons of the random numbers is "0".
             Console.WriteLine("\r\n \r\n  Response from task #5 (variant1)");
             Console.WriteLine("TEST method  is there only one positive numbers    " + a + "  ," + b + "  ," + c + "  ," + isOnePositiveNumber);
@@ -94,7 +96,7 @@ namespace MIG.UIP.HW2.ConditionsArrays
             int y1 = randomizer.Next(1, 100);
             int x2 = randomizer.Next(1, 100);
             int y2 = randomizer.Next(-100, -1);
-            bool isPointInRectangle = ((x > x1) && (x < x2) && (y < y1) && (y > y2));
+            bool isPointInRectangle = (x > x1 && x < x2 && y < y1 && y > y2);
 
             Console.WriteLine("Is point X=" + x + "  ,  Y=" + y + "   in rectangle   " + x1 + " , " + y1 + "  x  " + x2 + " , " + y2 + "   " + isPointInRectangle);
 
@@ -133,18 +135,13 @@ namespace MIG.UIP.HW2.ConditionsArrays
             y2 = randomizer.Next(1, 9);
             Console.WriteLine("from point A(" + x1 + " : " + y1 + ") to point B (" + x2 + " : " + y2 + ")");
             if ((x1 == x2) || (y1 == y2))
-            {
-                Console.WriteLine("Quin can go");
-            }
-
+                            Console.WriteLine("Quin can go");            
             else
-            {
-                if ((Math.Abs(x1 - x2)) == (Math.Abs(y1 - y2)))
-                {
-                    Console.WriteLine("Quin can go");
-                }
-                else
-                    Console.WriteLine("Quin can't go");
+            {                
+               if ((Math.Abs(x1 - x2)) == (Math.Abs(y1 - y2)))             
+                    Console.WriteLine("Quin can go");                
+               else
+                 Console.WriteLine("Quin can't go");
             }
 
 
@@ -268,113 +265,180 @@ namespace MIG.UIP.HW2.ConditionsArrays
             {
                 switch (number)
                 {
-                    case 1:                        firsNumber = "One";
-                        break;
-                    case 2:                        firsNumber = "Two";
-                        break;
-                    case 3:                        firsNumber = "Three";
-                        break;
-                    case 4:                        firsNumber = "Four";
-                        break;
-                    case 5:                        firsNumber = "Five";
-                        break;
-                    case 6:                        firsNumber = "Six";
-                        break;
-                    case 7:                        firsNumber = "Seven";
-                        break;
-                    case 8:                        firsNumber = "Eight";
-                        break;
-                    case 9:                        firsNumber = "Nine";
-                        break;
-                    case 10:                        firsNumber = "Ten";
-                        break;
-                    case 11:                        firsNumber = "Eleven";
-                        break;
-                    case 12:                        firsNumber = "Twelve";
-                        break;
-                    case 13:                        firsNumber = "Thirteen";
-                        break;
-                    case 14:                        firsNumber = "Fourteen";
-                        break;
-                    case 15:                        firsNumber = "Fifteen";
-                        break;
-                    case 16:                        firsNumber = "Sixteen";
-                        break;
-                    case 17:                        firsNumber = "Seventeen";
-                        break;
-                    case 18:                        firsNumber = "Eighteen";
-                        break;
-                    case 19:                        firsNumber = "Nineteen";
-                        break;
-                }
-
-            }
-            else
-                if (number >= 20 && number <= 29)
-                firsNumber = "Twenty";
-            else
-                    if (number >= 30 && number <= 39)
-                firsNumber = "Thirty";
-            else
-                    if (number >= 40 && number <= 49)
-                firsNumber = "Forty";
-            else
-                    if (number >= 50 && number <= 59)
-                firsNumber = "Fifty";
-            else
-                    if (number >= 60 && number <= 69)
-                firsNumber = "Sixty";
-            else
-                    if (number >= 70 && number <= 79)
-                firsNumber = "Seventy";
-            else
-                    if (number >= 80 && number <= 89)
-                firsNumber = "Eighty";
-            else
-                    if (number >= 90 && number <= 99)
-                firsNumber = "Ninety";
-
-            if (number >= 20 && number <= 99) { 
-                number = number % 10;
-                switch (number)
-                {
                     case 1:
-                        secondNumber = "One";
+                        firsNumber = "One";
                         break;
                     case 2:
-                        secondNumber = "Two";
+                        firsNumber = "Two";
                         break;
                     case 3:
-                        secondNumber = "Three";
+                        firsNumber = "Three";
                         break;
                     case 4:
-                        secondNumber = "Four";
+                        firsNumber = "Four";
                         break;
                     case 5:
-                        secondNumber = "Five";
+                        firsNumber = "Five";
                         break;
                     case 6:
-                        secondNumber = "Six";
+                        firsNumber = "Six";
                         break;
                     case 7:
-                        secondNumber = "Seven";
+                        firsNumber = "Seven";
                         break;
                     case 8:
-                        secondNumber = "Eight";
+                        firsNumber = "Eight";
                         break;
                     case 9:
-                        secondNumber = "Nine";
+                        firsNumber = "Nine";
+                        break;
+                    case 10:
+                        firsNumber = "Ten";
+                        break;
+                    case 11:
+                        firsNumber = "Eleven";
+                        break;
+                    case 12:
+                        firsNumber = "Twelve";
+                        break;
+                    case 13:
+                        firsNumber = "Thirteen";
+                        break;
+                    case 14:
+                        firsNumber = "Fourteen";
+                        break;
+                    case 15:
+                        firsNumber = "Fifteen";
+                        break;
+                    case 16:
+                        firsNumber = "Sixteen";
+                        break;
+                    case 17:
+                        firsNumber = "Seventeen";
+                        break;
+                    case 18:
+                        firsNumber = "Eighteen";
+                        break;
+                    case 19:
+                        firsNumber = "Nineteen";
                         break;
                 }
-               
+
             }
+            else
+            {
+                if (number >= 20 && number <= 29)
+                    firsNumber = "Twenty";
                 else
-                secondNumber = "";
+                    if (number >= 30 && number <= 39)
+                    firsNumber = "Thirty";
+                else
+                    if (number >= 40 && number <= 49)
+                    firsNumber = "Forty";
+                else
+                    if (number >= 50 && number <= 59)
+                    firsNumber = "Fifty";
+                else
+                    if (number >= 60 && number <= 69)
+                    firsNumber = "Sixty";
+                else
+                    if (number >= 70 && number <= 79)
+                    firsNumber = "Seventy";
+                else
+                    if (number >= 80 && number <= 89)
+                    firsNumber = "Eighty";
+                else
+                    if (number >= 90 && number <= 99)
+                    firsNumber = "Ninety";
 
-            Console.WriteLine("  ("+numberValue+" ) "+ firsNumber + " " + secondNumber);            
+                if (number >= 20 && number <= 99)
+                {
+                    number = number % 10;
+                    switch (number)
+                    {
+                        case 1:
+                            secondNumber = "One";
+                            break;
+                        case 2:
+                            secondNumber = "Two";
+                            break;
+                        case 3:
+                            secondNumber = "Three";
+                            break;
+                        case 4:
+                            secondNumber = "Four";
+                            break;
+                        case 5:
+                            secondNumber = "Five";
+                            break;
+                        case 6:
+                            secondNumber = "Six";
+                            break;
+                        case 7:
+                            secondNumber = "Seven";
+                            break;
+                        case 8:
+                            secondNumber = "Eight";
+                            break;
+                        case 9:
+                            secondNumber = "Nine";
+                            break;
+                    }
+
+                }
+                else
+                    secondNumber = "";
+            }
+
+            Console.WriteLine("  ("+numberValue+" ) "+ firsNumber + " " + secondNumber);
+
+
+            // task 16 (Eggs & 100 stages. Find the minimum number of throws)
+            Console.WriteLine(" \r\n \r\n Response from task #16  ");
+            //int dangerStage = randomizer.Next(1,101); 
+
+            int dangerStage = 0;
+            int minNeedDrops = 100;
+            int stagesInBuild = 100;
+
+            for (int z = 1; z <= stagesInBuild; z++)
+            {
+                dangerStage++;
+                int stageCountMax = 1;
+                int stageCountMin = 1;
+                int counDropsFirstEgg = 0;
+                int counDropsSecondEgg = 0;                               
+
+                for (int i = 14; stageCountMax <= 100 && stageCountMax <= dangerStage; i--)
+                {
+                    stageCountMax = stageCountMax + i;
+                    stageCountMin = stageCountMax - i;
+                    counDropsFirstEgg++;
+                }
+
+                for (int i = stageCountMin; i <= dangerStage && i <= 100; i++)
+                {
+                    counDropsSecondEgg++;
+                }
+                
+                int countDropsToFindeStage = counDropsFirstEgg + counDropsSecondEgg;
+                
+                if (countDropsToFindeStage<minNeedDrops)
+                {
+                    minNeedDrops = countDropsToFindeStage;
+                } 
+                Console.WriteLine("for stage # " + dangerStage+"    Count drops to finde stage is    " + countDropsToFindeStage);
+            }
+            Console.WriteLine("Minimum need drops of all cases  "+minNeedDrops);           
+          
+                                                            //Console.WriteLine("Danger Stage                   "+dangerStage);
+                                                            //Console.WriteLine("Drops of first Egg             " +counDropsFirstEgg);
+                                                            //Console.WriteLine("Drops of second Egg            " + counDropsSecondEgg);   
             Console.ReadLine();
-
         }
-
+        
+         
+        
     }
+
 }
