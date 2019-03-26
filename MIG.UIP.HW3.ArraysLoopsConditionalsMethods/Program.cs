@@ -57,11 +57,11 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
 
             n = 12;
             int[] arrayTaskFive = new int[n];
-            Random randTasx_five = new Random();
+            Random randomForTask = new Random();
             for (int i = arrayTaskFive.Length - 1; i >= 0; i--)
             {
 
-                arrayTaskFive[i] = randTasx_five.Next(1, 50);
+                arrayTaskFive[i] = randomForTask.Next(1, 50);
                 Console.WriteLine("index=" + i + "  value=" + arrayTaskFive[i]);
             }
 
@@ -71,22 +71,22 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
 
             n = 10;
             //Random randomArraysNumbers = new Random();            
-            int[] arrayTaskSix = new int[n];
-            for (int i = 0; i <= arrayTaskSix.Length - 1; i++)
+            int[] arraysForTask = new int[n];
+            for (int i = 0; i <= arraysForTask.Length - 1; i++)
             {
-                arrayTaskSix[i] = randTasx_five.Next(1, 50);
-                if (arrayTaskSix[i] % 2 == 0)
+                arraysForTask[i] = randomForTask.Next(1, 50);
+                if (arraysForTask[i] % 2 == 0)
                 {
-                    Console.WriteLine("odd number (index)=" + i + "  value =  " + arrayTaskSix[i]);
+                    Console.WriteLine("odd number (index)=" + i + "  value =  " + arraysForTask[i]);
                 }
 
             }
-            for (int j = arrayTaskSix.Length - 1; j >= 0; j--)
+            for (int j = arraysForTask.Length - 1; j >= 0; j--)
             {
-                if (arrayTaskSix[j] % 2 != 0)
+                if (arraysForTask[j] % 2 != 0)
                 {
 
-                    Console.WriteLine("iven number (index)=" + j + "  (value) =  " + arrayTaskSix[j]);
+                    Console.WriteLine("even number (index)=" + j + "  (value) =  " + arraysForTask[j]);
                 }
 
             }
@@ -95,19 +95,66 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
             // Task#7  (Дан массив A размера N (N — четное число). Вывести его элементы с четными номерами в порядке возрастания номеров: A2, A4, A6, …, AN. Условный оператор не использовать.)
             Console.WriteLine(" \r\n \r\n Response from task #7  ");
 
-            n = 16;
+            n = 8;
             int[] arrayA = new int[n];
-            for (int i = 0; i <= arrayA.Length - 1; i++)
+            for (int i = 0; i < arrayA.Length ; i++)
             {
-                arrayA[i] = randTasx_five.Next(1, 20);
+                arrayA[i] = randomForTask.Next(1, 20);
+                Console.WriteLine("Array A before sorting   " + arrayA[i]);
+            }
+
+            for (int i = 0; i < arrayA.Length ; i++)
+            {
+                for (int t = i + 1; t < arrayA.Length ; t++)
+                {
+                    while (arrayA[t] < arrayA[i])
+                    {
+                        arrayA[i] = arrayA[i] + arrayA[t];
+                        arrayA[t] = arrayA[i] - arrayA[t];
+                        arrayA[i] = arrayA[i] - arrayA[t];
+                    }
+                }
 
             }
 
+            for (int i = 0; i <= arrayA.Length - 1; i++)
+            {
+                if ((arrayA[i] % 2) == 0)
+                {
+                    Console.WriteLine("after sorting   array A " + arrayA[i]);
+                }
+                //Console.WriteLine("test all result" + arrayA[i]);
+            }
 
+            // Task#8  (Дан целочисленный массив размера N. Найти количество различных элементов в данном массиве.)
+            Console.WriteLine(" \r\n \r\n Response from task #8  ");
 
+            n = 5;            
+            int diferentElements = 0;
+            
+            int[] arrayB = new int[n] ;
+            for (int i =0; i<arrayB.Length;i++)
+            {
+                arrayB[i] = randomForTask.Next (1, 10);
+                Console.WriteLine("Array B before sorting   "+arrayB[i]);
+            }
 
+            for (int i =0; i<arrayB.Length-1;i++)
+            {
+                //int temp = i;
+                for (int k =i+1; k<arrayB.Length;k++)
+                {
+                    if (arrayB[k] != arrayB[i])
+                    {
+                        diferentElements++;
+                        
+                    }
+                }
+            }
+            int sameElemets =  diferentElements-n;
 
-
+            Console.WriteLine("different elements of array B =  "+diferentElements );
+            Console.WriteLine("same      elements of array B =  "+sameElemets);
 
 
 
@@ -115,7 +162,29 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
 
             Console.ReadLine();
 
+
+            
+
+
         }
+
+
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+            
+
+        
     }
 
 
