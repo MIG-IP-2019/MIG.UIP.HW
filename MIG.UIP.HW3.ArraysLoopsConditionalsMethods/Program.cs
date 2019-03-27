@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
+
 {
     class Program
     {
@@ -32,13 +34,34 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
             Console.WriteLine("count of numbers = " + countNumbersSecondTask);
 
 
-            // Task#3  (Начальный вклад в банке равен $1000. Через каждый месяц размер вклада увеличивается на P процентов от имеющейся суммы (P — вещественное число, 0 < P < 25). По данному P определить, через сколько месяцев размер вклада превысит $1100, и вывести найденное количество месяцев K (целое число) и итоговый размер вклада S (вещественное число).)
+            // Task#3  (Начальный вклад в банке равен $1000. Через каждый месяц размер вклада увеличивается на P процентов от имеющейся суммы (P — вещественное число, 0 < P < 25).
+            // По данному P определить, через сколько месяцев размер вклада превысит $1100, и вывести найденное количество месяцев K (целое число) и итоговый размер вклада S (вещественное число).)
             Console.WriteLine(" \r\n \r\n Response from task #3  ");
 
-            int startCapital = 1000;
-            int percent = 15;
-            int sFinalCapital = 0;
+            float capital = 1000f;
+            float percent = 3.2f;            
             int kMonths = 0;
+
+            for (; capital < 1100;)
+            {
+                kMonths++;
+                capital = capital / 100 * percent + capital;
+                Console.WriteLine("test" + capital);
+            }
+            Console.WriteLine("month count = " + kMonths);
+            Console.WriteLine("Final capital= " + capital);
+
+            //do
+            //{
+            //    capital = capital / 100 * percent + capital;
+            //    kMonths++;
+            //    Console.WriteLine("тест месяца " + kMonths);
+            //    Console.WriteLine("тест капитал " + capital);
+            //}
+            //while (capital < 1100);
+
+
+
 
             // Task#4  (Дано целое число N (> 0). Сформировать и вывести целочисленный массив размера N, содержащий N первых положительных нечетных чисел: 1, 3, 5, … .)
             Console.WriteLine(" \r\n \r\n Response from task #4  ");
@@ -66,7 +89,8 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
             }
 
 
-            // Task#6  (Дан целочисленный массив размера N. Вывести вначале все содержащиеся в данном массиве четные числа в порядке возрастания их индексов, а затем — все нечетные числа в порядке убывания их индексов. Также вывести количество четных и нечетных членов массива.)
+            // Task#6  (Дан целочисленный массив размера N. Вывести вначале все содержащиеся в данном массиве четные числа в порядке возрастания их индексов,
+            //           а затем — все нечетные числа в порядке убывания их индексов. Также вывести количество четных и нечетных членов массива.)
             Console.WriteLine(" \r\n \r\n Response from task #6  ");
 
             n = 10;
@@ -129,9 +153,8 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
             // Task#8  (Дан целочисленный массив размера N. Найти количество различных элементов в данном массиве.)
             Console.WriteLine(" \r\n \r\n Response from task #8  ");
 
-            n = 5;            
-            int diferentElements = 0;
-            
+            n = 5;             
+            int differentElements = 0;            
             int[] arrayB = new int[n] ;
             for (int i =0; i<arrayB.Length;i++)
             {
@@ -139,23 +162,26 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
                 Console.WriteLine("Array B before sorting   "+arrayB[i]);
             }
 
-            for (int i =0; i<arrayB.Length-1;i++)
+            for (int i =0; i<=arrayB.Length-1;i++)
             {
-                //int temp = i;
-                for (int k =i+1; k<arrayB.Length;k++)
+                bool nextElement = true;
+                for (int k =i+1; k<=arrayB.Length-1;k++)
                 {
-                    if (arrayB[k] != arrayB[i])
-                    {
-                        diferentElements++;
-                        
-                    }
+                    if (arrayB[i] == arrayB[k])
+                    {                        
+                        nextElement = false;
+                        break;
+                    }                    
                 }
-            }
-            int sameElemets =  diferentElements-n;
+                if (nextElement)
+                {
+                    differentElements++;                  
+                }
+            }            
 
-            Console.WriteLine("different elements of array B =  "+diferentElements );
-            Console.WriteLine("same      elements of array B =  "+sameElemets);
-
+            Console.WriteLine("different elements of array B =  "+ differentElements);
+       
+           
 
 
 
@@ -163,7 +189,14 @@ namespace MIG.UIP.HW3.ArraysLoopsConditionalsMethods
             Console.ReadLine();
 
 
-            
+
+
+
+            // Task#9  (Дано целое число N (> 0). Найти произведение N! = 1·2·…·N (N–факториал). Чтобы избежать целочисленного переполнения, 
+            //          вычислять это произведение с помощью вещественной переменной и вывести его как вещественное число. Использовать рекурсию.)
+            Console.WriteLine(" \r\n \r\n Response from task #9  ");
+
+            n = 10;
 
 
         }
