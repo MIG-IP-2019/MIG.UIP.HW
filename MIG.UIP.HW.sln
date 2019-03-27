@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HW8", "HW8", "{6B762823-C92
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIG.UIP.HW2.ConditionsArrays", "MIG.UIP.HW2.ConditionsArrays\MIG.UIP.HW2.ConditionsArrays.csproj", "{DD0B0643-6771-46FC-91A5-F5CCDA169DEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIG.HW_4.OOP.Classes", "MIG.HW_4.OOP.Classes\MIG.HW_4.OOP.Classes.csproj", "{3B88AD0F-CB4B-4F44-BB60-2932E9920D9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DD0B0643-6771-46FC-91A5-F5CCDA169DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD0B0643-6771-46FC-91A5-F5CCDA169DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD0B0643-6771-46FC-91A5-F5CCDA169DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B88AD0F-CB4B-4F44-BB60-2932E9920D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B88AD0F-CB4B-4F44-BB60-2932E9920D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B88AD0F-CB4B-4F44-BB60-2932E9920D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B88AD0F-CB4B-4F44-BB60-2932E9920D9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1EBA771E-F769-4536-BC7C-7EB2BF11A3D3} = {9163EEBD-F5CC-4686-87AB-E7E2736F1A75}
 		{DD0B0643-6771-46FC-91A5-F5CCDA169DEC} = {55D4E952-FBCA-43F8-86AC-3F2732D4B5FF}
+		{3B88AD0F-CB4B-4F44-BB60-2932E9920D9A} = {1098686C-5BC8-4892-AA1D-EE19DE09790D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E357765-1901-41AF-947E-37398972CC51}
