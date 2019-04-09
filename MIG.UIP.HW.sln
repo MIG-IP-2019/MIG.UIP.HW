@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{BBC3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle", "Rectangle\Rectangle.csproj", "{40EEF742-9931-4275-9596-832A3B9756EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book", "Book\Book.csproj", "{5B7CE67B-DE17-47F1-A732-6F594FF72FD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{40EEF742-9931-4275-9596-832A3B9756EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40EEF742-9931-4275-9596-832A3B9756EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40EEF742-9931-4275-9596-832A3B9756EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B7CE67B-DE17-47F1-A732-6F594FF72FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B7CE67B-DE17-47F1-A732-6F594FF72FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B7CE67B-DE17-47F1-A732-6F594FF72FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B7CE67B-DE17-47F1-A732-6F594FF72FD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{3B88AD0F-CB4B-4F44-BB60-2932E9920D9A} = {1098686C-5BC8-4892-AA1D-EE19DE09790D}
 		{B0E5E44F-EFE3-4071-9CFC-4EF5894360AB} = {AA4D5C20-2C90-4B5C-88C6-14A648334FDB}
 		{40EEF742-9931-4275-9596-832A3B9756EA} = {BBC3FADE-AC57-47FF-8407-5CEADDB59471}
+		{5B7CE67B-DE17-47F1-A732-6F594FF72FD5} = {BBC3FADE-AC57-47FF-8407-5CEADDB59471}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E357765-1901-41AF-947E-37398972CC51}

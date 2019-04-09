@@ -38,7 +38,7 @@ namespace Rectangle
         {
             get
             {
-                return this.Squere;
+                return this.SquereRectangle();
             }
         }
     }
